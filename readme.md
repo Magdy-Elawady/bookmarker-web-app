@@ -23,6 +23,7 @@ A simple and responsive web application to save and manage your favorite website
 ##  Screenshots
 
 ![screenshot](images/screenshot.png)
+![screenshot](images/screenshot-responisve.png)
 
 ##  What I Learned
 
