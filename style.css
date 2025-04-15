@@ -1,0 +1,188 @@
+:root {
+  --purple-color: #9f56c9;
+  --dark-purple: #642283;
+  --yellow-color: #f8edcd;
+  --saturated-yellow: #ffd255;
+}
+
+::selection {
+  /* color: red; */
+  background: var(--saturated-yellow);
+}
+
+a{
+  color: var(--yellow-color);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--dark-purple);
+}
+
+body {
+  font-family: "Noto Sans", serif;
+  font-weight: 500;
+  background-color: var(--purple-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background img {
+  position: absolute;
+  width: 200px;
+}
+
+.background img:nth-child(1) {
+  top: -80px;
+  left: 30%;
+}
+.background img:nth-child(2) {
+  top: 30%;
+  right: -80px;
+}
+.background img:nth-child(3) {
+  bottom: -50px;
+  left: -50px;
+}
+
+.container-fluid {
+  background-color: var(--yellow-color);
+  width: 95%;
+  margin: auto;
+  min-height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-fluid .row {
+  min-height: 90vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10%;
+}
+
+.container-fluid .row .inner-left {
+  padding-right: 150px;
+}
+.container-fluid .row .inner-right {
+  padding-left: 50px;
+}
+
+.container-fluid section p {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+h1 {
+  font-size: 60px;
+  font-family: "Dela Gothic One", sans-serif;
+  color: var(--dark-purple);
+  position: relative;
+  left: -15px;
+  display: inline-block;
+  padding: 0px 12px 15px;
+  z-index: 1;
+  cursor: default;
+}
+
+h1::before {
+  content: "";
+  background-color: var(--saturated-yellow);
+  width: 100%;
+  height: 50%;
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  transition: 0.5s;
+}
+h1:hover::before {
+  height: 80%;
+}
+
+section span {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.inputs input {
+  margin-bottom: 20px;
+}
+
+.inputs button {
+  background-color: var(--dark-purple);
+  color: var(--yellow-color);
+  border: none;
+  padding: 5px 0;
+  transition: 0.3s;
+}
+
+.inputs button:hover {
+  background-color: #4e1b65;
+}
+
+.table > :not(caption) > * > * {
+  background-color: transparent;
+}
+
+.btn {
+  background-color: var(--dark-purple);
+  border: 2px solid var(--dark-purple);
+  color: var(--yellow-color);
+  padding: 4px 8px;
+}
+
+.btn:hover {
+  border: 2px solid var(--dark-purple);
+  color: var(--dark-purple);
+}
+
+
+
+
+
+@media (max-width:992px) {
+  .container-fluid .row .inner-left {
+    padding-right: 0px;
+  }
+  .container-fluid .row .inner-right {
+    padding-left: 0px;
+  }
+
+  
+.background img:nth-child(1) {
+display: none;
+}
+.background img:nth-child(2) {
+  top: 15%;
+  right: -140px;
+
+}
+.background img:nth-child(3) {
+display: none;
+}
+
+h1 {
+  font-size: 30px;
+}
+.container-fluid section p {
+  font-size: 15px;
+}
+
+section span {
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.container-fluid .row{
+  margin: 0;
+}
+
+}
